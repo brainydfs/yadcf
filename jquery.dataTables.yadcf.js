@@ -1415,15 +1415,16 @@ var yadcf = (function ($) {
 		resetIApiIndex();
 
 	}
-
-	function rangeNumberSldierDrawTips(min_tip_val, max_tip_val, min_tip_id, max_tip_id, table_selector_jq_friendly, column_number) {
+	//function rangeNumberSldierDrawTips passes an additional variable, "data", which is the array of values you set earlier.
+	function rangeNumberSldierDrawTips(min_tip_val, max_tip_val, min_tip_id, max_tip_id, table_selector_jq_friendly, column_number, data) {
 		var first_handle = $("#yadcf-filter-wrapper-inner-" + table_selector_jq_friendly + "-" + column_number + " .ui-slider-handle:first"),
 			last_handle = $("#yadcf-filter-wrapper-inner-" + table_selector_jq_friendly + "-" + column_number + " .ui-slider-handle:last"),
 			min_tip_inner,
 			max_tip_inner;
 
-		min_tip_inner = "<div id=\"" + min_tip_id + "\" class=\"yadcf-filter-range-number-slider-min-tip-inner\">" + min_tip_val + "</div>";
-		max_tip_inner = "<div id=\"" + max_tip_id + "\" class=\"yadcf-filter-range-number-slider-max-tip-inner\">" + max_tip_val + "</div>";
+		//note the changes in the two lines below.
+		min_tip_inner = "<div id=\"" + min_tip_id + "\" class=\"yadcf-filter-range-number-slider-min-tip-inner\">" + data[min_tip_val] + "</div>";
+		max_tip_inner = "<div id=\"" + max_tip_id + "\" class=\"yadcf-filter-range-number-slider-max-tip-inner\">" + data[max_tip_val] + "</div>";
 
 		$(first_handle).addClass("yadcf-filter-range-number-slider-min-tip").html(min_tip_inner);
 		$(last_handle).addClass("yadcf-filter-range-number-slider-max-tip").html(max_tip_inner);
@@ -1562,11 +1563,11 @@ var yadcf = (function ($) {
 
 			if (columnObj.externally_triggered !== true) {
 				slideFunc = function (event, ui) {
-					rangeNumberSldierDrawTips(ui.values[0], ui.values[1], min_tip_id, max_tip_id, table_selector_jq_friendly, column_number);
+					rangeNumberSldierDrawTips(ui.values[0], ui.values[1], min_tip_id, max_tip_id, table_selector_jq_friendly, column_number, myData);
 					rangeNumberSliderChange(table_selector_jq_friendly, event, ui);
 				};
 				changeFunc = function (event, ui) {
-					rangeNumberSldierDrawTips(ui.values[0], ui.values[1], min_tip_id, max_tip_id, table_selector_jq_friendly, column_number);
+					rangeNumberSldierDrawTips(ui.values[0], ui.values[1], min_tip_id, max_tip_id, table_selector_jq_friendly, column_number, myData);
 					if (event.originalEvent || $(event.target).slider("option", "yadcf-reset") === true) {
 						$(event.target).slider("option", "yadcf-reset", false);
 						rangeNumberSliderChange(table_selector_jq_friendly, event, ui);
@@ -1574,22 +1575,26 @@ var yadcf = (function ($) {
 				};
 			} else {
 				slideFunc = function (event, ui) {
-					rangeNumberSldierDrawTips(ui.values[0], ui.values[1], min_tip_id, max_tip_id, table_selector_jq_friendly, column_number);
+					rangeNumberSldierDrawTips(ui.values[0], ui.values[1], min_tip_id, max_tip_id, table_selector_jq_friendly, column_number, myData);
 				};
 				changeFunc = function (event, ui) {
-					rangeNumberSldierDrawTips(ui.values[0], ui.values[1], min_tip_id, max_tip_id, table_selector_jq_friendly, column_number);
+					rangeNumberSldierDrawTips(ui.values[0], ui.values[1], min_tip_id, max_tip_id, table_selector_jq_friendly, column_number, myData);
 				};
 			}
+			//create an array of the values you would like the slider to step to.
+			var myData = [0, 0.25, 1, 2, 3, 4, 5, 7, 9, 10, 12, 20, 25, 27, 33, 50, 100, 109, 162, 200, 300, 500, 535, 1065];
 			sliderObj = {
 				range: true,
-				min: min_val,
-				max: max_val,
-				values: [min_state_val, max_state_val],
+				//"min" and "max" now point to a value in the myData array. Remember, since this is a zero-based array, the max will be "myData.length - 1" and not "myData.length"
+				min: 0,
+				max: myData.length - 1,
 				create: function (event, ui) {
-					rangeNumberSldierDrawTips(min_state_val, max_state_val, min_tip_id, max_tip_id, table_selector_jq_friendly, column_number);
+					$(this).slider('values',0,0);
+                   			$(this).slider('values',1,myData.length - 1);
 				},
 				slide: slideFunc,
 				change: changeFunc
+				
 			};
 
 			if (columnObj.filter_plugin_options !== undefined) {
