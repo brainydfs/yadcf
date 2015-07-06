@@ -1416,15 +1416,15 @@ var yadcf = (function ($) {
 
 	}
 	//function rangeNumberSldierDrawTips passes an additional variable, "data", which is the array of values you set earlier.
-	function rangeNumberSldierDrawTips(min_tip_val, max_tip_val, min_tip_id, max_tip_id, table_selector_jq_friendly, column_number, data) {
+	function rangeNumberSldierDrawTips(min_tip_val, max_tip_val, min_tip_id, max_tip_id, table_selector_jq_friendly, column_number, valueArray) {
 		var first_handle = $("#yadcf-filter-wrapper-inner-" + table_selector_jq_friendly + "-" + column_number + " .ui-slider-handle:first"),
 			last_handle = $("#yadcf-filter-wrapper-inner-" + table_selector_jq_friendly + "-" + column_number + " .ui-slider-handle:last"),
 			min_tip_inner,
 			max_tip_inner;
 
 		//note the changes in the two lines below.
-		min_tip_inner = "<div id=\"" + min_tip_id + "\" class=\"yadcf-filter-range-number-slider-min-tip-inner\">" + data[min_tip_val] + "</div>";
-		max_tip_inner = "<div id=\"" + max_tip_id + "\" class=\"yadcf-filter-range-number-slider-max-tip-inner\">" + data[max_tip_val] + "</div>";
+		min_tip_inner = "<div id=\"" + min_tip_id + "\" class=\"yadcf-filter-range-number-slider-min-tip-inner\">" + valueArray[min_tip_val] + "</div>";
+		max_tip_inner = "<div id=\"" + max_tip_id + "\" class=\"yadcf-filter-range-number-slider-max-tip-inner\">" + valueArray[max_tip_val] + "</div>";
 
 		$(first_handle).addClass("yadcf-filter-range-number-slider-min-tip").html(min_tip_inner);
 		$(last_handle).addClass("yadcf-filter-range-number-slider-max-tip").html(max_tip_inner);
@@ -1560,7 +1560,8 @@ var yadcf = (function ($) {
 
 			$(filter_selector_string).append("<span class=\"yadcf-filter-range-number-slider-min-tip-hidden hide\">" + min_val + "</span>");
 			$(filter_selector_string).append("<span class=\"yadcf-filter-range-number-slider-max-tip-hidden hide\">" + max_val + "</span>");
-
+			
+			//add myData as a value in each of the rangeNumberSldierDrawTips calls
 			if (columnObj.externally_triggered !== true) {
 				slideFunc = function (event, ui) {
 					rangeNumberSldierDrawTips(ui.values[0], ui.values[1], min_tip_id, max_tip_id, table_selector_jq_friendly, column_number, myData);
