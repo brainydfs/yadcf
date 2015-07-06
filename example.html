@@ -2,18 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> 
+	<script type="text/javascript" language="javascript" src="http://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
+	<script src="jquery.dataTables.yadcf.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <link href="jquery.datatables.yadcf.css" rel="stylesheet" type="text/css" />
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
-<script src="jquery.dataTables.yadcf.js"></script>
-<link rel="stylesheet" href="code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-
  
 	<script type="text/javascript">
 
@@ -50,13 +46,6 @@
         filter_default_label: "",
 	filter_container_id: "external_filter_container3"
     }, {
-	column_number: 6,
-        column_data_type: "rendered_html",
-        html_data_type: "text",
-	filter_reset_button_text: false,
-        filter_default_label: "",
-	filter_container_id: "external_filter_container4"
-    }, {
         column_number: 4,
         filter_type: "range_number_slider",
 	filter_container_id: "external_filter_container2",
@@ -88,7 +77,6 @@
 				<th>Sport</th>
 				<th>Entry Fee</th>
 				<th>Type</th>
-				<th>Start Time</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -96,7 +84,7 @@
 		      <td id="external_filter_container5"></td>
 		      <td id="external_filter_container2"></td>
 		      <td id="external_filter_container3"></td>
-		      <td id="external_filter_container4"></td>
+
 		</tbody>
 </table>
 
@@ -110,7 +98,7 @@
 			<th>Entry Fee</th>
 			<th>Type</th>
 			<th>Start Time</th>
-			<th><img src="images/multi.png" title="Multi-Entry?" alt="Multi-Entry Contest?"></th>
+			<th>Multi-Entry?</th>
 			<th>Rake</th>
 			<th>Current Cash %</th>
 			<th>Filled Cash %</th>
@@ -225,7 +213,7 @@
 			<td>Tournament</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.8</td>
 			<td>21.8</td>
@@ -248,7 +236,7 @@
 			<td>Tournament</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.94</td>
 			<td>44.22</td>
@@ -294,7 +282,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>2.04</td>
@@ -386,7 +374,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>12.48</td>
@@ -432,7 +420,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>62.49</td>
@@ -501,7 +489,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>13.6</td>
 			<td>36.36</td>
@@ -524,7 +512,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>13.62</td>
 			<td>73.85</td>
@@ -547,7 +535,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>10.0</td>
 			<td>72.72</td>
@@ -570,7 +558,7 @@
 			<td>Tournament</td>
 			<td>1436235000</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.93</td>
 			<td>48.62</td>
@@ -593,7 +581,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>796.0</td>
 			<td>23.91</td>
@@ -639,7 +627,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>71.42</td>
@@ -662,7 +650,7 @@
 			<td>Tournament</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.8</td>
 			<td>41.44</td>
@@ -685,7 +673,7 @@
 			<td>Tournament</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.92</td>
 			<td>45.48</td>
@@ -731,7 +719,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>11.09</td>
@@ -777,7 +765,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>9.09</td>
@@ -915,7 +903,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>13.6</td>
 			<td>79.48</td>
@@ -938,7 +926,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>22.74</td>
@@ -1099,7 +1087,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>12.5</td>
 			<td>61.55</td>
@@ -1145,7 +1133,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>26.31</td>
@@ -1283,7 +1271,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>10.0</td>
 			<td>72.72</td>
@@ -1421,7 +1409,7 @@
 			<td>Tournament</td>
 			<td>1436227500</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>10.0</td>
 			<td>100.0</td>
@@ -1467,7 +1455,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>12.34</td>
@@ -1490,7 +1478,7 @@
 			<td>Tournament</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.8</td>
 			<td>40.16</td>
@@ -1536,7 +1524,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>33.34</td>
@@ -1605,7 +1593,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>11.33</td>
 			<td>42.02</td>
@@ -1651,7 +1639,7 @@
 			<td>Tournament</td>
 			<td>1436235000</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.8</td>
 			<td>100.0</td>
@@ -1720,7 +1708,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>13.57</td>
 			<td>70.71</td>
@@ -1789,7 +1777,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>17.85</td>
@@ -1835,7 +1823,7 @@
 			<td>Tournament</td>
 			<td>1436235000</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.75</td>
 			<td>100.0</td>
@@ -1858,7 +1846,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>6.25</td>
@@ -1904,7 +1892,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>11.33</td>
 			<td>32.05</td>
@@ -1950,7 +1938,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>275.74</td>
 			<td>35.88</td>
@@ -1996,7 +1984,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>100.0</td>
@@ -2019,7 +2007,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>13.6</td>
 			<td>74.51</td>
@@ -2042,7 +2030,7 @@
 			<td>Tournament</td>
 			<td>1436235000</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>12.5</td>
 			<td>100.0</td>
@@ -2111,7 +2099,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>5.56</td>
@@ -2157,7 +2145,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>49.98</td>
@@ -2180,7 +2168,7 @@
 			<td>Tournament</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.94</td>
 			<td>36.72</td>
@@ -2249,7 +2237,7 @@
 			<td>Tournament</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.9</td>
 			<td>22.55</td>
@@ -2295,7 +2283,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>100.0</td>
@@ -2387,7 +2375,7 @@
 			<td>Tournament</td>
 			<td>1436227500</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.5</td>
 			<td>100.0</td>
@@ -2410,7 +2398,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>12.0</td>
 			<td>55.55</td>
@@ -2479,7 +2467,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>43.49</td>
@@ -2502,7 +2490,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>11.0</td>
 			<td>79.37</td>
@@ -2525,7 +2513,7 @@
 			<td>Tournament</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>10.67</td>
 			<td>42.86</td>
@@ -2548,7 +2536,7 @@
 			<td>Tournament</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.94</td>
 			<td>26.76</td>
@@ -2571,7 +2559,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>11.67</td>
 			<td>27.78</td>
@@ -2663,7 +2651,7 @@
 			<td>Tournament</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.9</td>
 			<td>29.83</td>
@@ -2686,7 +2674,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>35.73</td>
@@ -2709,7 +2697,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>11.33</td>
 			<td>35.71</td>
@@ -2870,7 +2858,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>55.55</td>
@@ -2893,7 +2881,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>5.56</td>
@@ -3008,7 +2996,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>13.0</td>
 			<td>48.78</td>
@@ -3054,7 +3042,7 @@
 			<td>Tournament</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>11.0</td>
 			<td>38.15</td>
@@ -3077,7 +3065,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>5.56</td>
@@ -3100,7 +3088,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>35.72</td>
@@ -3123,7 +3111,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>10.86</td>
@@ -3215,7 +3203,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>12.0</td>
 			<td>46.51</td>
@@ -3261,7 +3249,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>21.73</td>
@@ -3284,7 +3272,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>24.99</td>
@@ -3307,7 +3295,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>11.67</td>
 			<td>40.54</td>
@@ -3353,7 +3341,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>38.47</td>
@@ -3376,7 +3364,7 @@
 			<td>Tournament</td>
 			<td>1436227500</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.5</td>
 			<td>100.0</td>
@@ -3422,7 +3410,7 @@
 			<td>Tournament</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>6.5</td>
 			<td>33.33</td>
@@ -3491,7 +3479,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>13.63</td>
 			<td>75.22</td>
@@ -3652,7 +3640,7 @@
 			<td>Tournament</td>
 			<td>1436235000</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>10.0</td>
 			<td>100.0</td>
@@ -3767,7 +3755,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>10.0</td>
 			<td>58.13</td>
@@ -3836,7 +3824,7 @@
 			<td>Tournament</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>7.0</td>
 			<td>26.67</td>
@@ -3905,7 +3893,7 @@
 			<td>Tournament</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>11.43</td>
 			<td>46.67</td>
@@ -3928,7 +3916,7 @@
 			<td>Tournament</td>
 			<td>1436235000</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.9</td>
 			<td>100.0</td>
@@ -3974,7 +3962,7 @@
 			<td>Tournament</td>
 			<td>1436227500</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.9</td>
 			<td>100.0</td>
@@ -3997,7 +3985,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>1.2</td>
@@ -4020,7 +4008,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>2.22</td>
@@ -4181,7 +4169,7 @@
 			<td>Tournament</td>
 			<td>1436227500</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>14.92</td>
 			<td>83.96</td>
@@ -4204,7 +4192,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>23.81</td>
@@ -4227,7 +4215,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>38.48</td>
@@ -4250,7 +4238,7 @@
 			<td>Qualifier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>15.0</td>
 			<td>25.01</td>
@@ -4273,7 +4261,7 @@
 			<td>Multiplier</td>
 			<td>1436223900</td>
 			
-			<td><img src="images/multi.png" title="Multi-Entry Contest" alt="DraftKings or Fanduel contest is multi-entry"></td>
+			<td>True</td>
 			
 			<td>12.5</td>
 			<td>69.57</td>
