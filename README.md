@@ -1,4 +1,4 @@
-Yet Another DataTables Column Filter - (yadcf) - Non-linear-step-size slider
+Yet Another DataTables Column Filter - (yadcf) - Non-linear step-size snap-slider
 =====
  
 Description:
@@ -9,6 +9,8 @@ For example, if you want a slider to look like this:
 |----|----|----|----|----|----|----|
 0    2   25   100  500  600 10000 20000
 Then this fork will help you.
+
+Alternatively, open the example.html in this fork and use the slider to understand what I am referring to.
 
 Code:
 =====
