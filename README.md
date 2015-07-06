@@ -8,6 +8,7 @@ This fork allows you create custom, non-linear step sizes when using yadcf's sli
 For example, if you want a slider to look like this:
 
 |----|----|----|----|----|----|----|
+
 0    2   25   100  500  600 10000 20000
 
 Then this fork will help you.
