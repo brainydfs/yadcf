@@ -113,6 +113,7 @@
 .yadcf-number-slider-filter-wrapper-inner .yadcf-filter-range-number-slider-max-tip-inner {
 	position:absolute;
 	top: 11px;
+	right: 10px;
 }
 
 .yadcf-exclude-wrapper {
